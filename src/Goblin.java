@@ -4,7 +4,7 @@ public class Goblin extends Monster{
         target.setHp(target.getHp()-8);
     }
 
-    public Goblin(String name, int hp){
-        super(name, hp);
+    public Goblin(int hp, char suffix){
+        super(hp, suffix);
     }
 }

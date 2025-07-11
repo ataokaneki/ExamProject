@@ -6,14 +6,6 @@ public class Hero extends Character{
         target.setHp(target.getHp()-10); //？？？
     }
 
-    public void setHp(int hp){
-        try {
-            Character.setHp();  //？？？？？
-        }catch(IllegalArgumentException i) {
-            System.out.println("初期設定に誤りがあるため、キャラクターを作成できませんでした");
-        }
-    }
-
     public Hero(String name, int hp, String weapon){
         super(name, hp);
         /*
