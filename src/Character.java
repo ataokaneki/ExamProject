@@ -1,5 +1,5 @@
 public abstract class Character implements Creature {
-    String name;
+    private String name;
     private int hp;
 
     public String getName(){
@@ -29,10 +29,9 @@ public abstract class Character implements Creature {
 
     public Character(String name, int hp) {
         setName(name);
-        try {
-            this.setHp(hp);
-        }catch(IllegalArgumentException i) {
-            System.out.println("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        if(hp < 0){
+            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
         }
+        setHp(hp);
     }
 }

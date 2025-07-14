@@ -37,11 +37,10 @@ public abstract class Monster implements Creature{
 
     public Monster(String name, int hp, char suffix) {
         this.setName(name);
-        try {
-            this.setHp(hp);
-        }catch(IllegalArgumentException i) {
-            System.out.println("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        if(hp < 0){
+            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
         }
+        setHp(hp);
         this.setSuffix(suffix);
     }
 }

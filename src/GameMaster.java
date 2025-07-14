@@ -2,23 +2,23 @@ import java.util.ArrayList;
 
 public class GameMaster {
     public static void main(String[] args) {
-        Hero h = new Hero("勇者", 100, "剣");
-        Wizard w = new Wizard("魔法使い",60,20);
-        Thief t = new Thief("盗賊", 70);
+        Hero hero = new Hero("勇者", 100, "剣");
+        Wizard wizard = new Wizard("魔法使い",60,20);
+        Thief thief = new Thief("盗賊", 70);
 
-        ArrayList<Character> party = new ArrayList<>();
-        party.add(h);
-        party.add(w);
-        party.add(t);
+        ArrayList<Character> party = new ArrayList<>(); //もっといい方法がないものか
+        party.add(hero);
+        party.add(wizard);
+        party.add(thief);
 
-        Matango m = new Matango("お化けキノコ", 45, 'A');
-        Goblin g = new Goblin("ゴブリン", 50, 'A');
-        Slime s = new Slime("スライム", 40, 'A');
+        Matango matango = new Matango("お化けキノコ", 45, 'A');
+        Goblin goblin = new Goblin("ゴブリン", 50, 'A');
+        Slime slime = new Slime("スライム", 40, 'A');
 
         ArrayList<Monster> monsters = new ArrayList<>();
-        monsters.add(m);
-        monsters.add(g);
-        monsters.add(s);
+        monsters.add(matango);
+        monsters.add(goblin);
+        monsters.add(slime);
 
         System.out.println("---味方パーティ---");
         for(Character character : party) {
@@ -42,9 +42,9 @@ public class GameMaster {
             }
         }
 
-        System.out.println("\nダメージを受けた"+h.getName()+"が突然光だした！");
-        System.out.println(h.getName()+"はスーパーヒーローに進化した！");
-        SuperHero sh = new SuperHero(h);
+        System.out.println("\nダメージを受けた"+hero.getName()+"が突然光だした！");
+        System.out.println(hero.getName()+"はスーパーヒーローに進化した！");
+        SuperHero sh = new SuperHero(hero);
         for(Monster monster : monsters){
             sh.attack(monster);
         }
