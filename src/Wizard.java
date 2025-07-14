@@ -1,16 +1,22 @@
 public class Wizard extends Character{
-    int mp;
+    private int mp;
 
     public void attack(Creature target){
         System.out.println(this.getName() + "は火の玉を放った！" + target.getName() + "に3のダメージを与えた！");
-        target.setHp(target.getHp()-6);  //6減らす(？？？)
-        this.mp -= 1;
+        target.setHp(target.getHp()-3);  //6減らす(？？？)
+        setMp(this.getMp()-1);
     }
 
-    public void setHp(int hp){}
+    public void setMp(int mp){
+        this.mp = mp;
+    }
+
+    public int getMp(){
+        return this.mp;
+    }
 
     public Wizard(String name,int hp, int mp){
         super(name,hp);
-        this.mp = mp;
+        this.setMp(mp);
     }
 }

@@ -9,12 +9,12 @@ public abstract class Character implements Creature {
         return this.hp;
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
     public void setHp(int hp){
-        try{
-            this.hp = hp;
-        }catch(IllegalArgumentException i) {
-            this.hp = 0;
-        }
+        this.hp = Math.max(0, hp);
     }
 
     public final boolean isAlive(){
@@ -28,7 +28,7 @@ public abstract class Character implements Creature {
 
 
     public Character(String name, int hp) {
-        this.name = name;
+        setName(name);
         try {
             this.setHp(hp);
         }catch(IllegalArgumentException i) {
