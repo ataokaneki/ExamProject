@@ -40,7 +40,7 @@ public abstract class Monster implements Creature{
         if(hp < 0){
             throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
         }
-        setHp(hp);
+        this.setHp(hp);
         this.setSuffix(suffix);
     }
 }

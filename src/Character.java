@@ -28,10 +28,10 @@ public abstract class Character implements Creature {
 
 
     public Character(String name, int hp) {
-        setName(name);
+        this.setName(name);
         if(hp < 0){
             throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
         }
-        setHp(hp);
+        this.setHp(hp);
     }
 }
