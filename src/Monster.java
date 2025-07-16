@@ -32,7 +32,7 @@ public abstract class Monster implements Creature{
     }
 
     public void showStatus(){
-        System.out.println(this.name + this.suffix + "：HP" + this.hp);
+        System.out.println(this.getName() + this.getSuffix() + "：HP" + this.getHp());
     }
 
     public Monster(String name, int hp, char suffix) {
