@@ -4,7 +4,7 @@ public final class Slime extends Monster{
         target.setHp(target.getHp()-5);
     }
 
-    public Slime(String name, int hp, char suffix){
-        super(name, hp, suffix);
+    public Slime(int hp, char suffix){
+        super("スライム", hp, suffix);
     }
 }

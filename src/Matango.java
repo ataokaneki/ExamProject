@@ -4,7 +4,7 @@ public class Matango extends Monster{
         target.setHp(target.getHp()-6);
     }
 
-    public Matango(String name, int hp, char suffix){
-        super(name, hp, suffix);
+    public Matango(int hp, char suffix){
+        super("お化けキノコ", hp, suffix);
     }
 }
