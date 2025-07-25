@@ -14,11 +14,11 @@ public class GameMaster {
 
         System.out.println("---味方パーティ---");
         for(Character character : party) {
-            System.out.println(character.getName()+"：HP "+character.getHp());
+            character.showStatus();
         }
         System.out.println("---敵グループ---");
         for(Monster monster : monsters){
-            System.out.println(monster.getName()+monster.getSuffix()+"：HP "+monster.getHp());
+            monster.showStatus();
         }
 
         System.out.println("\n味方の総攻撃！");
@@ -43,7 +43,7 @@ public class GameMaster {
 
         System.out.println("\n---味方パーティ最終ステータス---");
         for(Character character : party) {
-            System.out.println(character.getName()+"：HP "+character.getHp());
+            character.showStatus();
             System.out.print("生存状況：");
             if(character.isAlive()) {
                 System.out.println("生存");
@@ -53,7 +53,7 @@ public class GameMaster {
         }
         System.out.println("---敵グループ最終ステータス---");
         for(Monster monster : monsters){
-            System.out.println(monster.getName()+monster.getSuffix()+"：HP "+monster.getHp());
+            monster.showStatus();
             System.out.print("生存状況：");
             if(monster.isAlive()) {
                 System.out.println("生存");
